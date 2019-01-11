@@ -28,7 +28,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|text|null: false, add_index|
 |email|integer|null: false, foreign_key: true|
 |Password|integer|null: false, foreign_key: true|
 
