@@ -33,7 +33,7 @@ Things you may want to cover:
 |Password|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :groups
+- has_many :groups, through: :members
 - has many :members
 - has_many :messages
 
@@ -46,7 +46,7 @@ Things you may want to cover:
 |name|integer|null: false|
 
 ### Association
-- has_many :users
+- has_many :users, through: :members
 - has many :members
 - has many :messages
 
