@@ -1,0 +1,32 @@
+.chat-main
+  .chat-main__header
+    .chat-main__header--groupbox
+      .chat-main__header--groupbox-name
+        ええ
+      .chat-main__header--groupbox-edit
+        edit
+    .chat-main__header--members
+      MEMBER:
+      %i
+        ishida
+  .chat-main__body
+    .chat-main__body--messages
+      .chat-main__body--messages__box
+        .chat-main__body--messages__box-user
+          ishida
+        .chat-main__body--messages__box-time
+          2019/01/07 13:06:53
+        .chat-main__body--messages__box-text
+          えれえれえええ
+
+
+  .chat-main__footer
+    %form#new_message.chat-main__footer-form{"accept-charset" => "UTF-8", :action => "/groups/2181/messages", :enctype => "multipart/form-data", :method => "post"}
+      %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+      %input{:name => "authenticity_token", :type => "hidden", :value => "f9Hibg5/p46t1c3r+95quyxh9NBVGneER2dTd3zXVDy69MMADoHUpbEiiKuJbTMa7FVFSwt0AB//TdYl1Usm0g=="}/
+      .chat-main__footer-body
+        %input#message_body.message{:name => "message[body]", :placeholder => "type a message", :type => "text"}/
+        %label.chat-file{:for => "message_image"}
+          %input#message_image.image{:name => "message[image]", :type => "file"}/
+          %i.fa.fa-image
+      %input.submit{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
